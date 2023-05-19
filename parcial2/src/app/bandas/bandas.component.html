@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <!-- AQUI SE DEFINEN LAS COLUMNAS DE LA TABLA -->
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">País</th>
+          <th scope="col">Género</th>
+          <th scope="col">Fundación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let banda of bandas">
+          <td>
+            <dd>{{banda.id}}</dd>
+          </td>
+          <td>
+            <dd>{{banda.name}}</dd>
+          </td>
+          <td>
+            <dd>{{banda.country}}</dd>
+          </td>
+          <td>
+            <dd>{{banda.genre}}</dd>
+          </td>
+          <td>
+            <dd>{{banda.foundation_year}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
