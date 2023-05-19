@@ -21,6 +21,16 @@ export class BandasComponent implements OnInit {
     });
   }
 
+  selectedBandas!: Bandas;
+  selected: Boolean = false;
+  equipos: Array<Bandas> = [];
+
+  //On selected for showing the details when image clicked.
+  onSelected(bandas: Bandas): void {
+    this.selected = true;
+    this.selectedBandas = bandas;
+  }
+
 
   constructor(private bandasService: BandasService) { }
 

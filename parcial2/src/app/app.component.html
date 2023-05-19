@@ -1,8 +1,21 @@
-<div class="header">
-  <h1>Lista de Bandas</h1>
+<div class="row row-header">
+  <div class="col-12">
+  <h1 class="bands-header">Bandas Musicales</h1>
+  </div>
+</div>
+<div class="row">
+  <div class = "col-12 text-center mb-4">
+      <h2 class = "margen font-weight-bold">Bandas Musicales</h2>
+          <img class="img-fluid mx-auto"src="https://rockthebestmusic.com/wp-content/uploads/2020/05/bandas-rock.jpg" height="900px" width="600px" alt="Avatar">
+      </div>
 </div>
 <hr>
-<img src="https://rockthebestmusic.com/wp-content/uploads/2020/05/bandas-rock.jpg" alt="Portada Bandas" class="img-responsive">
-<hr>
-<app-bandas></app-bandas>
+<div class="row">
+  <div class="col-7 text-center">
+    <app-bandas></app-bandas>
+  </div>
+  <div class="col-5 text-center">
+    <app-bandas-detail></app-bandas-detail>
+  </div>
+</div>
 <hr>
