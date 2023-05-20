@@ -2,14 +2,22 @@
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  margin-left: 2rem;
+  font-size: 16px;
 }
 
-.table th,
+.table th
+{
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  color: #e0e0e0;
+}
 .table td {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
+  color: #000000;
 }
 
 .table thead th {
@@ -19,6 +27,20 @@
 
 /* Estilos para el encabezado de la tabla */
 .table th {
-  background-color: #f5d590;
+  background-color: #000000;
   border-bottom-width: 2px;
+}
+
+.parOldestBand {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  margin-bottom: 10rem;
+}
+
+.clicker {
+
+  color: rgb(115, 92, 10);
+
 }

@@ -1,0 +1,36 @@
+.margen2 {
+  margin: 0px 0;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+
+#bandas-card {
+  max-width: 450px;
+  max-height: auto;
+  margin: 10px auto;
+  border: 1px solid #4f4d4d;
+  border-radius: 10px;
+}
+
+.card-img-top {
+  object-fit: cover;
+  max-height: 300px;
+  width: 450px;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.4;
+}

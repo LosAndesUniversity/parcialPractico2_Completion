@@ -30,12 +30,34 @@ export class BandasComponent implements OnInit {
     this.selectedBandas = bandas;
   }
 
+  //Calculate the oldest band:
+
+  getOldestBand(): string {
+    let oldestBand: Bandas | undefined;
+    let oldestYear = Number.MAX_VALUE;
+    const currentYear = 2023;
+
+    for (const banda of this.bandasList) {
+      if (banda.foundation_year < oldestYear) {
+        oldestBand = banda;
+        oldestYear = banda.foundation_year;
+      }
+    }
+
+    if (oldestBand) {
+      const yearsAgo = currentYear - oldestYear;
+      return `La banda más antigua es ${oldestBand.name}, que fue fundada hace ${yearsAgo} años.`;
+    }
+
+    return '';
+  }
 
   constructor(private bandasService: BandasService) { }
 
   // Funcion que se ejecuta cada vez que se llama al componente
   ngOnInit() {
      this.getBandasList();
+     this.getOldestBand();
 
   }
 
