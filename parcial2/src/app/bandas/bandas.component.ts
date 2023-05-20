@@ -13,17 +13,16 @@ import { BandasService } from './bandas.service';
 export class BandasComponent implements OnInit {
 
   //Atributos definidos que son necesarios para la clase.
-  bandas: Array<Bandas> = [];
+  bandasList: Array<Bandas> = [];
 
   getBandasList() {
-    this.bandasService.getBandasList().subscribe(bandas => {
-      this.bandas = bandas;
+    this.bandasService.getBandasList().subscribe((bandas) => {
+      this.bandasList = bandas;
     });
   }
 
   selectedBandas!: Bandas;
   selected: Boolean = false;
-  equipos: Array<Bandas> = [];
 
   //On selected for showing the details when image clicked.
   onSelected(bandas: Bandas): void {

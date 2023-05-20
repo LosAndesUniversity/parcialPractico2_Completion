@@ -1,9 +1,6 @@
 
-<div *ngIf="selected">
-  <app-bandas-detail [bandas]="selectedBandas"></app-bandas-detail>
-</div>
-
 <div class="row">
+  <div class="col-7 text-center">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -16,12 +13,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let banda of bandas">
+          <tr *ngFor="let banda of bandasList">
             <td>
               <dd>{{banda.id}}</dd>
             </td>
             <td>
-              <dd>{{banda.name}}</dd>
+              <a href="#" (click)="onSelected(banda)">
+                <dd>{{banda.name}}</dd>
+              </a>
             </td>
             <td>
               <dd>{{banda.country}}</dd>
@@ -36,3 +35,10 @@
         </tbody>
       </table>
     </div>
+
+  <div class="col-5 text-center">
+    <div *ngIf="selected">
+      <app-bandas-detail [bandas]="selectedBandas"></app-bandas-detail>
+    </div>
+  </div>
+</div>
